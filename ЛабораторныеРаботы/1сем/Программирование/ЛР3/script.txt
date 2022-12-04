@@ -1,0 +1,7 @@
+javac -sourcepath src -d bin src/Main.java
+javac -sourcepath src -d bin src/*/*.java
+javac -sourcepath src -d bin src/*/*/*
+echo > manifest.mf
+jar -cmef manifest.mf Main Lab3.jar -C bin .
+#запуск jar'a
+java -jar Lab3.jar
